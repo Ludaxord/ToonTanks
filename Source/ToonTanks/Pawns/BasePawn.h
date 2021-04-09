@@ -29,14 +29,14 @@ public:
 
 private:
 	UPROPERTY()
-	UCapsuleComponent* m_capsuleComponent;
+	UCapsuleComponent* CapsuleComp;
 
 	UPROPERTY()
-	UStaticMeshComponent* m_baseMesh;
+	UStaticMeshComponent* BaseMesh;
 
 	UPROPERTY()
-	UStaticMeshComponent* m_turretMesh;
+	UStaticMeshComponent* TurretMesh;
 
 	UPROPERTY()
-	USceneComponent* m_projectileSpawnPoint;
+	USceneComponent* ProjectileSpawnPoint;
 };
