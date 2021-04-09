@@ -31,9 +31,25 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	void CalculateMoveInput(float MoveValue);
+	void CalculateRotateInput(float RotateValue);
+
+	void Move();
+	void Rotate();
+
+	UPROPERTY(EditAnywhere)
+	float MoveSpeed = 100.0f;
+
+	UPROPERTY(EditAnywhere)
+	float RotateSpeed = 100.0f;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArm;
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* Camera;
+
+	FVector MoveDirection;
+	FQuat RotationDirection;
+
 };
